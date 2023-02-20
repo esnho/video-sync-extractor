@@ -1,0 +1,277 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kktsvetkov/heiho@latest/heiho.css" />
+  <script src="https://cdn.jsdelivr.net/gh/kktsvetkov/heiho@latest/heiho.js"></script>
+  <script src="https://unpkg.com/papaparse@5.3.1/papaparse.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      font-size: 1.2em;
+    }
+
+    #content {
+      padding: 1em;
+    }
+
+    iframe {
+      width: 100%;
+      height: 12em;
+    }
+
+    @media screen and (min-width: 730px) and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1),
+    not all and (orientation: portrait) {
+
+      #content {
+        padding: 0;
+        max-width: 50vw;
+        margin: auto;
+      }
+    }
+
+    #content img {
+      max-width: 100%;
+    }
+
+    #doubleImage {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+    #doubleImage * {
+      max-width: 50% !important;
+    }
+
+    a {
+      color: cyan;
+    }
+
+    .links div h1 {
+      pointer-events: none;
+      width: 100%;
+      color: white;
+      text-shadow: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
+    }
+
+    .github-link svg:hover,
+    .github-link svg:active {
+      transform: scale(1.25);
+    }
+
+    #social-icons {
+      display: flex;
+      padding: 1em;
+      justify-content: space-around;
+    }
+
+    #link-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 90%;
+      overflow: auto;
+      flex-grow: 0;
+    }
+
+
+    .links {
+      overflow: hidden;
+    }
+
+    .links img:active,
+    .links img:hover {
+      opacity: 0.6;
+      background-color: rgba(188, 188, 188, 0.4);
+    }
+
+    .links div {
+      position: relative;
+      float: left;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      pointer-events: none;
+    }
+
+    #social-icons img {
+      width: 10vw;
+      max-width: 4.5em;
+    }
+
+    .links {
+      width: 50vw;
+      height: 50vw;
+      max-width: 50vw;
+      max-height: 50vw;
+      overflow: hidden;
+    }
+
+    .links img {
+      min-width: 55vw;
+      min-height: 55vw;
+      max-height: 55vw;
+      margin-left: -5vw;
+      margin-top: -5vw;
+    }
+
+    .links img:active,
+    .links img:hover {
+      min-width: 60vw;
+      min-height: 60vw;
+      max-height: 60vw;
+      margin-left: -7.5vw;
+      margin-top: -7.5vw;
+      opacity: 0.6;
+      background-color: rgba(188, 188, 188, 0.4);
+    }
+
+    .links div {
+      position: relative;
+      float: left;
+      top: -50vw;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      pointer-events: none;
+    }
+
+    @media screen and (min-width: 730px) and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1),
+    not all and (orientation: portrait) {
+
+      #social-icons img {
+        width: 5vw;
+        max-width: 2.5em;
+      }
+
+      .links {
+        width: 25vw;
+        height: 25vw;
+        max-width: 25vw;
+        max-height: 25vw;
+      }
+
+      h1 {
+        font-size: 1.2em;
+      }
+
+      .links img {
+        min-width: 30vw;
+        min-height: 30vw;
+        max-height: 30vw;
+        margin-left: -5vw;
+        margin-top: -5vw;
+      }
+
+      .links img:active,
+      .links img:hover {
+        min-width: 35vw;
+        min-height: 35vw;
+        max-height: 35vw;
+        margin-left: -7.5vw;
+        margin-top: -7.5vw;
+      }
+
+      .links div {
+        top: -25vw;
+      }
+    }
+  </style>
+</head>
+
+<body ontouchstart="">
+  <div id="content">
+    <h1>Sync Extractor</h1>
+    <img src="built-unit-scope.jpeg">
+    <p>
+      I need a sync extraction module, I want to be able to play with the sync signals and nowadays there are no modules that expose syncs.
+    </p>
+    <p>
+      I've been helped on LZX forum in desiging the circuit, then I've refined and draw the traces by myself.
+    </p>
+    <p>
+      In this project I've learned how to solder SMD components, it was scary but I did it. I've been able to solder the main chip with a simple and cheap <a href="https://www.amazon.it/gp/product/B07Y4V2317/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1" target="_blank">solder station</a>, some <a href="https://www.amazon.it/gp/product/B00425FUW2/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1" target="_blank">flux</a>, and <a href="https://www.amazon.it/Spirig-WICK2-2-1-5-dissaldatura-larghezza-antistatica/dp/B00KX20MG2/ref=sr_1_3?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=9KIU2BYSRFA1&keywords=solder+wick&qid=1675544936&s=tools&sprefix=solder+wick%2Cdiy%2C107&sr=1-3" target="_blank">solder wick</a>.
+    </p>
+    <p>
+      I have trained myself using those cheap <a href="https://www.ebay.it/itm/253113393593" target="_blank">training sets</a>, it was fun!
+    </p>
+    <p>
+      If it's your first time soldering SMD I suggest to (remember that this is my personal experience, may not apply to your case, take your own risk):
+    </p>
+    <ol>
+      <li>Train yourself using one of those kits</li>
+      <li>Watch some tutorials about SMD soldering, like <a href="https://www.youtube.com/watch?v=6PB0u8irn-4" target="_blank">this one</a></li>
+      <li>Use abundant no clean flux as the one linked above</li>
+      <li>Use as little amount of solder as possible</li>
+      <li>Bridges can be cleaned up with solder wick</li>
+      <li>Check the connections with a multimeter to ensure there're no shorts</li>
+    </ol>
+    <h2>Check for shorts</h2>
+    <p>
+      The interactive BOM have the NETs embedded, is possible to check which pins are connected by clicking on the pin themselves.
+    </p>
+    <p>
+      On top of the BOM, the image below highlights the SMD area.
+    </p>
+    <img src="smd-area.jpeg">
+    <!-- <img src="first-clone.jpeg">
+    <p>
+      This is the built unit.
+    </p>
+    <div id="doubleImage">
+      <img src="built-unit-side.jpeg">
+      <img src="racked.png">
+    </div>
+    <p>
+      <iframe src="https://www.youtube-nocookie.com/embed/Jr5mhyLyYzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    <p>
+      <iframe src="https://www.youtube-nocookie.com/embed/4x5oY6HU21A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p> -->
+    <ul>
+      <li><a href="BOM_revB.csv">Download the BOM</a></li>
+      <li><a onclick="bomPreview()" href="#">Preview the BOM</a></li>
+      <li><a href="BOM_revB.html">Interactive BOM (use this to assembly the module)</a></li>
+    </ul>
+    <h2>Do you sell them?</h2>
+    <p>I do not plan to sell assembled units. If you are interested in PCB+Panel vist the <a href="https://community.lzxindustries.net/t/sync-extraction-circuit/" target="_blank">LZX Forum Thread</a>, we can plan a collective order.</p>
+    <p>I don't want to release the gerbers for the moment.</p>
+    <h2>Do you have the schematics?</h2>
+    <p>Sure! Check <a href="https://community.lzxindustries.net/t/sync-extraction-circuit/" target="_blank">this thread</a></p>
+    <p> </p>
+    <img src="built-unit-side.jpeg">
+    <p><a href="https://esnho.github.io/">homepage</a></p>
+  </div>
+</body>
+<script >
+  function bomPreview() {
+    Papa.parse("BOM_revB.csv", {
+      download: true,
+      complete: function(results) {
+        Heiho(results.data);
+      }
+    });
+  }
+  window.onload = () => {
+    let images = document.getElementsByTagName("img")
+    for (let image of images) {
+      image.addEventListener('click', () => {
+        window.open(image.src, "_blank")
+      });
+    }
+  }
+</script>
+</html>
